@@ -1,0 +1,22 @@
+{
+  "name": "usrann.discord",
+  "version": "1.0.0",
+  "description": "A bot that sends approved user announcements to the #user announcemets channel in your discord server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Damianswankkd4/usrann.discord.git"
+  },
+  "author": "Damian Swan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Damianswankkd4/usrann.discord/issues"
+  },
+  "homepage": "https://github.com/Damianswankkd4/usrann.discord#readme",
+  "dependencies": {
+    "discord.js": "^12.0.2"
+  }
+}
