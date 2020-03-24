@@ -24,7 +24,7 @@ bot.on('message', message=> {
             if(args[1] === 'create'){
                message.channel.bulkDelete(1);
                message.channel.send(`${message.author}` + ": " + args[2]).then(messageReaction => {
-   messageReaction.react(":Verified:");
+   messageReaction.react("✔");
                })
                
                message.edit();
@@ -51,7 +51,7 @@ bot.on('message', message=> {
        break;
       
        case 'sendverify':
-          message.channel.send(`Hey ${args[1]} of of you announcments has been verified by ${message.author} Check it out!`);
+          message.channel.send(`Hey ${args[1]} one of you announcments has been verified by ${message.author} Check it out!`);
           message.author.send(`${message.author} The Verifiction Is Compleate Thank You`);
           
           
