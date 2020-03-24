@@ -4,6 +4,17 @@ const token = "NjkxNTU4MzYzNTA2NjcxNjM2.XnkuHA.mPbavJKC1sxObvr0wZs7W4K4AO8";
 
 const PREFIX = 'ua!';
 
+bot.on('ready', () => {
+    bot.user.setStatus('available')
+    bot.user.setPresence({
+        game: {
+            name: 'Your Announcments',
+            type: "WATCHING",
+        
+        }
+    });
+}); 
+
 bot.on('ready', () =>{
     console.log("The Bot Is Now Currently online");
 })
@@ -61,6 +72,21 @@ bot.on('message', message=> {
           message.channel.send(`Sorry ${args[1]} your announcement request has been denied due to ${args[2]}`);
           message.author.send(`${message.author} Your Rejection Is Compleate Thank your!`);
           
+          break;
+          case 'help':
+            const Embed = new Discord.MessageEmbed()
+            .setTitle("Basic Commands For @MeowBot")
+            .setColor(0xFF0000)
+            .addField("ua!ping").setDescription("pings the bot")
+            .addField("ua!suggestann").setDescription("Contacts a User who can create your announcment")
+            .addField("ua!suggest delete").setDescription("Contacts a user to delete you announcement")
+            .addField(`** Moderation Commands **`)
+            .addField("ua!announce \[arg\] ").setDescription("Users with mode perms can create and delete usr announcments")
+            .addField("ua!sendverify").setDescription("Verifys a users announcment")
+            .addField("ua!sendreject")
+            .setDescription("Use The \"ua!Help\" Commands to List Basic commands ")
+
+            msg.author.send(Embed);
           break;
 }
 });
