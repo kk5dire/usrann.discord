@@ -84,10 +84,28 @@ bot.on('message', message=> {
             .addField("ua!announce \[arg\] ").setDescription("Users with mode perms can create and delete usr announcments")
             .addField("ua!sendverify").setDescription("Verifys a users announcment")
             .addField("ua!sendreject")
+            .addField(`** Bot Owner Commands **`)
+            .addField(`** ${message.author} JSYK only @kkd5-2#6541 can use these commands! **`)
+            .addField(`ua!debug on\/off`)
             .setDescription("Use The \"ua!Help\" Commands to List Basic commands ")
 
-            msg.author.send(Embed);
+            message.author.send(Embed);
           break;
+
+          case 'debug':
+            if(args[1] === 'on'){
+              message.channel.send(`Hey @mod and @admin I Will Be offline for debuging For a bit see you soon`);
+              break;
+            }
+            if(args[1] === 'off'){
+                message.channel.send(`Hey @mod and @admin I Am Back Baby!!!`);
+                break;
+            }
+            if(!args[1]){
+message.reply("Oops Sorry Make sure your @kkd5-2#6541 and you have a second arg!!!");
+break;
+            }
+            break;
 }
 });
 
